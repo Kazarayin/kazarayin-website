@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>K.A. Zarayin – Books</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header placeholder for dynamic injection -->
+  <div id="header-placeholder"></div>
+
+  <!-- Book Layout Section -->
+  <section class="book-layout">
+    <div class="book-left">
+      <a href="the-dancing-jinn.html">
+  <img src="The Dancing Jinn Under Moonlight.png" alt="Book Cover" class="book-cover" />
+</a>
+    </div>
+
+    <div class="book-right">
+      <h2>The Dancing Jinn</h2>
+      <p>
+        We sang to celebrate. But something else was listening.
+
+       After graduation, four friends go camping at a beach buried in the desert sands. They expected music, laughter, and memories.
+       They didn't expect the voices.
+       They didn't expect the melody to sing back.
+       And Alex... he can't stop hearing it.
+      </p>
+      <a href="https://www.wattpad.com/story/390564913-the-dancing-jinn?utm_source=web&utm_medium=email&utm_content=share_myworks" target="_blank">
+  <button class="preorder-button">Read Me</button>
+</a>
+
+    </div>
+  </section>
+
+  <hr class="divider" style="display: none;">
+
+<section class="wip-section">
+  <h2>Work in Progress</h2>
+  <p class="wip-intro">
+    These stories are still whispering, still forming, still hungry.  
+    Here’s a glimpse at the horrors yet to be unleashed...
+  </p>
+
+  <div class="wip-book">
+  <div class="coming-soon-tag">Coming Soon</div>
+  <h3>Between Two Worlds</h3>
+  <p>
+    My debut Novel <em>Between Two Worlds</em>, this upcoming novel will be in the dark horror fantasy genre. <em><strong>Three stories. One horror.</strong></em>
+     The deeper they go, the less human they become.
+  </p>
+  <span class="wip-status">Status: Writing – 35,453 words</span>
+  <div class="progress-bar">
+    <div class="progress" style="width: 40%;"></div>
+  </div>
+</div>
+
+
+ <div class="wip-book">
+  <div class="coming-soon-tag">Coming Soon</div>
+  <h3>BTW: The Origins</h3>
+  <p>
+    Set a couple of years after the events of <em>Between Two Worlds</em>, this upcoming sequel follows an author who got corrupted and blinded by what he seeks.
+    Not all gods were born divine. Some were made in fire… and in blood, some were consumed by the darkness.
+  </p>
+  <span class="wip-status">Status: Future Idea – 0 words</span>
+  <div class="progress-bar">
+    <div class="progress" style="width: 0%;"></div>
+  </div>
+</div>
+
+<div class="wip-book">
+  <div class="coming-soon-tag">Coming Soon</div>
+  <h3>BTW: The Lands Between</h3>
+  <p>
+    Set a couple of years after the events of <em>Between Two Worlds</em>, this upcoming sequel follows an author who got corrupted and blinded by what he seeks.
+    Not all gods were born divine. Some were made in fire… and in blood, some were consumed by the darkness.
+  </p>
+  <span class="wip-status">Status: Future Idea – 0 words</span>
+  <div class="progress-bar">
+    <div class="progress" style="width: 0%;"></div>
+  </div>
+</div>
+</section>
+
+
+
+  <!-- Header Nav Script -->
+  <script>
+    fetch('header.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      })
+      .then(() => {
+        const nav = document.getElementById("mainNav");
+        document.querySelector(".menu-toggle").addEventListener("click", () => {
+          nav.classList.toggle("open");
+        });
+      });
+  </script>
+
+</body>
+</html>

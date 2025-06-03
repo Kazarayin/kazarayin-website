@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Encounter – The Guy with The Orange Jacket</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .encounter-template {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 40px 20px;
+      background: #0b0b0b;
+      color: #e4e4e4;
+      border-left: 4px solid #d4af37;
+      font-family: 'Spectral', serif;
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.1);
+    }
+
+    .encounter-template h1 {
+      color: #d4af37;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .encounter-template p {
+      text-align: justify;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 40px;
+      color: #d4af37;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .encounter-template {
+        padding: 20px 15px;
+      }
+
+      .encounter-template h1 {
+        font-size: 2em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <div id="header-placeholder"></div>
+
+  <!-- MAIN CONTENT -->
+  <section class="encounter-template">
+    <h1>The Guy with The Orange Jacket</h1>
+    <p>
+      I was only 12, home alone for the first time. It was quiet — too quiet — the kind that makes you feel like you're being watched.
+    </p>
+    <p>
+      I remember hearing footsteps in the hallway, slow, deliberate, dragging. But when I checked, there was no one. I locked every door and tried to convince myself it was nothing.
+    </p>
+    <p>
+      But the sound came again… closer this time. Right outside my room. I stood frozen, staring at the door — until I saw a shadow move across the bottom. It stopped. And then… it whispered my name.
+    </p>
+    <p>
+      I didn’t open that door. I didn’t move. I stayed like that until morning light leaked through the window. And even then, I wasn’t sure it was safe.
+    </p>
+    <p>
+      I never saw it. But I’ve heard it every now and then. And I know it remembers me.
+    </p>
+
+    <a class="back-link" href="encounters.html">← Back to Encounters</a>
+  </section>
+
+  <!-- HEADER LOADER SCRIPT -->
+  <script>
+    fetch('header.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      })
+      .then(() => {
+        setTimeout(() => {
+          const toggle = document.querySelector(".menu-toggle");
+          const nav = document.getElementById("mainNav");
+          if (toggle && nav) {
+            toggle.addEventListener("click", () => {
+              nav.classList.toggle("open");
+            });
+          }
+        }, 100);
+      });
+  </script>
+</body>
+</html>

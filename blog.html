@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>K.A. Zarayin – Blog</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Dynamic Header -->
+  <div id="header-placeholder"></div>
+
+  <!-- Blog Content -->
+  <section class="content blog-page">
+    <h1>This Isn’t a Blog</h1>
+    <p class="blog-intro">
+      I don’t blog. I don’t post often.  
+      But sometimes the silence speaks — and this is where I let it echo.
+    </p>
+
+    <!-- Post 1 -->
+    <article class="blog-post">
+      <h2>Between Silence and the Veil</h2>
+      <p class="blog-meta">May 31, 2025 • by K.A. Zarayin</p>
+      <p>
+        Stories aren’t born — they break through.  
+        Between what I say and what I bury, there are whispers.  
+        This space is for them. I won’t promise weekly posts, or even consistency.  
+        But when something claws its way out, I’ll leave it here.  
+        Maybe someone will find it. Maybe that someone is you.
+      </p>
+    </article>
+
+    <!-- Post 2 -->
+    <article class="blog-post">
+      <h2>The First Time I Heard the Jinn</h2>
+      <p class="blog-meta">June 1, 2025 • by K.A. Zarayin</p>
+      <p>
+        It wasn’t a sound. Not really.  
+        It was silence bending around the wrong corner of my mind — like something was speaking *between* thoughts.  
+        I wasn’t afraid. Not yet. But I stopped writing for a week after that.
+        <br><br>
+        I didn’t know it at the time, but that moment would become the seed for what is now <em>Between Two Worlds</em>.  
+        You might call it imagination. Or inspiration.  
+        I call it a visitor.
+      </p>
+    </article>
+  </section>
+
+  <!-- Header Script -->
+  <script>
+    fetch('header.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      })
+      .then(() => {
+        const nav = document.getElementById("mainNav");
+        document.querySelector(".menu-toggle").addEventListener("click", () => {
+          nav.classList.toggle("open");
+        });
+      });
+  </script>
+
+</body>
+</html>

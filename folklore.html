@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>K.A. Zarayin – Folklore</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <section class="content folklore-page">
+    <h1>Folklore & Forgotten Myths</h1>
+    <p class="folklore-intro">
+      This archive contains the ancient whispers and cultural ghosts that inspired my saga.<br>
+      Some are real. Some are reimagined. All of them are watching.
+    </p>
+
+    <!-- ENTRY: SEA JINN -->
+    <div class="folklore-entry">
+      <h2>The Sea Jinn – بودريا</h2>
+      <p>
+        From Bahraini folklore, بودريا is said to drown divers and pull swimmers to their deaths in unknown ways.
+        <span class="dots">...</span>
+        <span class="more-text">
+          In my world, he is one of the Darakthul Kingdom — the most feared kingdom among both Jinn and Humans.
+          Nobody knows what he looks like. This folklore inspired the creation of Darakthul.
+        </span>
+      </p>
+      <button class="read-more-btn" onclick="toggleReadMore(this)">Read More</button>
+    </div>
+
+    <!-- ENTRY: MOTHER OF A DONKEY -->
+    <div class="folklore-entry">
+      <h2>The Mother of a Donkey – أم حمار</h2>
+      <p>
+        A female jinn known to stand by roads at night asking someone to stop and
+        <span class="dots">...</span>
+        <span class="more-text">
+          give her a ride to her destination. The legend says that whoever picks her up is never seen again.<br>
+          The only way to tell if she’s real is to look at her feet — they resemble a donkey’s.
+        </span>
+      </p>
+      <button class="read-more-btn" onclick="toggleReadMore(this)">Read More</button>
+    </div>
+
+    <!-- ENTRY: KONG KOI -->
+    <div class="folklore-entry">
+      <h2>Kong Koi – ผีกองกอย</h2>
+      <p>
+        A <strong>Thai</strong> folklore about a forest jinn that drains the blood
+        <span class="dots">...</span>
+        <span class="more-text">
+          of its victims. It has one leg, one hand, and a long tongue. Its victims are often those who get lost
+          or wander off the road. It sneaks into camps at night when no one is awake.<br>
+          Some have reported hearing faint whispers of “Koi... koi... koi...” in the dark.
+        </span>
+      </p>
+      <button class="read-more-btn" onclick="toggleReadMore(this)">Read More</button>
+    </div>
+  </section>
+
+  <!-- TOGGLE SCRIPT -->
+  <script>
+    function toggleReadMore(btn) {
+      const entry = btn.parentElement;
+      const dots = entry.querySelector(".dots");
+      const moreText = entry.querySelector(".more-text");
+
+      if (moreText.style.display === "inline") {
+        moreText.style.display = "none";
+        dots.style.display = "inline";
+        btn.textContent = "Read More";
+      } else {
+        moreText.style.display = "inline";
+        dots.style.display = "none";
+        btn.textContent = "Show Less";
+      }
+    }
+  </script>
+
+  <!-- HEADER NAV SCRIPT -->
+  <script>
+    fetch('header.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      })
+      .then(() => {
+        const nav = document.getElementById("mainNav");
+        document.querySelector(".menu-toggle").addEventListener("click", () => {
+          nav.classList.toggle("open");
+        });
+      });
+  </script>
+
+</body>
+</html>

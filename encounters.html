@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>K.A. Zarayin – Encounters</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <section class="content encounters-page">
+    <h1>Encounters from the Other Side</h1>
+    <p class="encounters-intro">
+      These aren’t stories.  
+      These are memories I wish I could explain away.  
+      But they happened. And they changed me.<br>
+      I was living in a <strong>Haunted House</strong>.
+    </p>
+
+    <!-- ENCOUNTER 1 -->
+    <div class="encounter-entry">
+      <img src="candle.png" alt="Candle Icon" class="candle-icon" />
+      <h2>The Old Lady</h2>
+      <p>
+        I was in high school when this happened.
+        <span class="dots">...</span>
+        <span class="read-more">
+          I was in my room, reading — when I heard my name whispered right beside me.  
+          I turned... nothing. I searched the entire house. I never found anything.  
+          That night, I couldn’t sleep — because every time I closed my eyes, I heard breathing that wasn’t mine.
+        </span>
+      </p>
+      <button class="read-more-btn" onclick="toggleReadMore(this)">Read More</button>
+      <br><br>
+      <a href="encounter-the-old-lady.html" style="color:#d4af37;">Read full story →</a>
+    </div>
+
+    <!-- ENCOUNTER 2 -->
+    <div class="encounter-entry">
+      <img src="candle.png" alt="Candle Icon" class="candle-icon" />
+      <h2>The Flying Clothes</h2>
+      <p>
+        Again, I was in high school when this occurred.
+        <span class="dots">...</span>
+        <span class="read-more">
+          I was walking home when I saw a man wearing an orange jacket standing still under a flickering streetlight.  
+          He didn’t move. Not even when I passed him. But later that night…  
+          I saw the same man standing outside my window. Still wearing the same jacket.  
+          And my house was two stories up.
+        </span>
+      </p>
+      <button class="read-more-btn" onclick="toggleReadMore(this)">Read More</button>
+      <br><br>
+      <a href="encounter-flying-clothes.html" style="color:#d4af37;">Read full story →</a>
+    </div>
+
+    <!-- ENCOUNTER 3 -->
+    <div class="encounter-entry">
+      <img src="candle.png" alt="Candle Icon" class="candle-icon" />
+      <h2>The Guy with the Orange Jacket</h2>
+      <p>
+        Booo
+        <span class="dots">...</span>
+        <span class="read-more">
+          dodedode dum dum dodedode dum
+        </span>
+      </p>
+      <button class="read-more-btn" onclick="toggleReadMore(this)">Read More</button>
+      <br><br>
+      <a href="encounter-orange-jacket.html" style="color:#d4af37;">Read full story →</a>
+    </div>
+
+  </section>
+
+  <!-- TOGGLE SCRIPT -->
+  <script>
+    function toggleReadMore(btn) {
+      const entry = btn.parentElement;
+      const dots = entry.querySelector(".dots");
+      const moreText = entry.querySelector(".read-more");
+
+      if (moreText.style.display === "inline") {
+        moreText.style.display = "none";
+        dots.style.display = "inline";
+        btn.textContent = "Read More";
+      } else {
+        moreText.style.display = "inline";
+        dots.style.display = "none";
+        btn.textContent = "Show Less";
+      }
+    }
+  </script>
+
+  <!-- HEADER NAV SCRIPT -->
+  <script>
+    fetch('header.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      })
+      .then(() => {
+        const nav = document.getElementById("mainNav");
+        document.querySelector(".menu-toggle").addEventListener("click", () => {
+          nav.classList.toggle("open");
+        });
+      });
+  </script>
+
+</body>
+</html>

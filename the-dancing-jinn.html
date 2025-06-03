@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>The Dancing Jinn</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .book-detail {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 40px 20px;
+      background: #0b0b0b;
+      color: #e4e4e4;
+      border-left: 4px solid #d4af37;
+      font-family: 'Spectral', serif;
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.1);
+    }
+
+    .book-detail h1 {
+      color: #d4af37;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .book-detail img {
+      width: 200px;
+      float: right;
+      margin-left: 20px;
+      box-shadow: 0 0 12px rgba(212, 175, 55, 0.3);
+    }
+
+    .book-detail p {
+      text-align: justify;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .book-quote {
+      margin: 30px 0;
+      padding-left: 20px;
+      font-style: italic;
+      font-size: 1.1rem;
+      text-align: center;
+    }
+
+    .quote-source {
+      display: block;
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: #979797;
+    }
+
+    .preorder-button {
+      background-color: transparent;
+      border: 2px solid #d4af37;
+      color: #d4af37;
+      padding: 10px 20px;
+      font-size: 1rem;
+      font-family: 'Spectral', serif;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-align: center;
+      display: block;
+      margin: 20px auto;
+      text-decoration: none;
+      width: fit-content;
+    }
+
+    .preorder-button:hover {
+      background-color: #d4af37;
+      color: #0b0b0b;
+      box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 40px;
+      color: #d4af37;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .book-detail img {
+        float: none;
+        display: block;
+        margin: 0 auto 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Loader -->
+  <div id="header-placeholder"></div>
+
+  <section class="book-detail">
+    <img src="The Dancing Jinn Under Moonlight.png" alt="Book Cover" />
+    <h1>The Dancing Jinn</h1>
+
+    <blockquote class="book-quote">
+      “The soul is not the price. It’s the door.”
+      <span class="quote-source">— Unknown</span>
+    </blockquote>
+
+    <p>
+      <strong>Chapters:</strong> 19<br>
+      <strong>Pages Count:</strong> ~250<br>
+      <strong>Word Count:</strong> ~50,000
+    </p>
+
+    <hr class="divider" color="#d4af37">
+
+    <p>
+      A group of friends vanish during a weekend camping trip.  
+      Months later, a family searching for a fresh start moves into the same cursed forest.  
+      Years later, a struggling author follows their stories into a nightmare older than time.
+    </p>
+
+    <p>
+      <strong>Three stories. One horror.</strong>  
+      The deeper they go, the less human they become.
+    </p>
+
+    <p>
+      <em>The Dancing Jinn</em> is the haunting first volume in a saga of ancient magic, forgotten languages, and haunted bloodlines.
+    </p>
+
+    <p>
+      Written first in Arabic, then translated by the author, this dark fantasy tale pulls you between worlds — and never quite lets you go.
+    </p>
+
+    <a class="preorder-button" href="https://your-preorder-link.com" target="_blank">Pre-Order Now</a>
+    <a class="back-link" href="books.html">← Back to Books</a>
+  </section>
+
+  <!-- Header Nav Script -->
+  <script>
+    fetch('header.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      })
+      .then(() => {
+        const nav = document.getElementById("mainNav");
+        document.querySelector(".menu-toggle").addEventListener("click", () => {
+          nav.classList.toggle("open");
+        });
+      });
+  </script>
+</body>
+</html>

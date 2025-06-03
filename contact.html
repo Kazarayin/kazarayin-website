@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>K.A. Zarayin – Contact</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <section class="content contact-page">
+    <h1>Contact</h1>
+    <p>
+      Want to collaborate, inquire, or send me a cursed scroll?  
+      Use the form below to enter the void.
+    </p>
+
+    <!-- CONTACT FORM -->
+    <form action="https://formsubmit.co/Albinkhalil.writer@gmail.com" method="POST" class="contact-form">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+
+    <!-- SOCIALS -->
+    <p style="margin-top: 40px;">Or DM me on social media to enter the shadows:</p>
+    <div class="contact-socials">
+      <a href="https://www.instagram.com/kazarayin" target="_blank">
+        <img src="instagram-logo.png" alt="Instagram" class="social-icon" />
+      </a>
+      <a href="https://www.tiktok.com/@kazarayin" target="_blank">
+        <img src="tiktok-logo.png" alt="TikTok" class="social-icon" />
+      </a>
+    </div>
+
+    <!-- WATTPAD -->
+    <p>Check out my writing on Wattpad:</p>
+    <a href="https://www.wattpad.com/user/Kazarayin" target="_blank">
+      <img src="wattpad-logo.png" alt="Wattpad" class="social-icon" />
+    </a>
+  </section>
+
+  <!-- HEADER LOADER SCRIPT -->
+  <script>
+    fetch('header.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      })
+      .then(() => {
+        const nav = document.getElementById("mainNav");
+        document.querySelector(".menu-toggle").addEventListener("click", () => {
+          nav.classList.toggle("open");
+        });
+      });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>K.A. Zarayin – About</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <section class="content about-page">
+    <h1>About the Author</h1>
+
+    <div class="about-container">
+      <img src="Author.jpg" class="author-photo" alt="Author Photo" />
+      <p>
+        <strong>K.A. Zarayin</strong> is the pen name of Bahraini writer Khalil Albinkhalil — a conjurer of cursed worlds, haunted bloodlines, and forbidden tongues.  
+        His dark fantasy saga <em>Between Two Worlds</em> is a descent into realms inspired by folklore, ancient jinn legends, and the delicate art of shadowed storytelling.
+        <br><br>
+        He writes first in Arabic, then crosses dimensions to shape English versions that haunt both minds and margins.  
+        His dream? To give the world one the best horror novels, that people will remember for years to come.
+        His ambition is to see his saga unfold not only on the page... but on the big screen, where darkness flickers brightest.
+      </p>
+    </div>
+  </section>
+
+  <script>
+    fetch('header.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      })
+      .then(() => {
+        const nav = document.getElementById("mainNav");
+        document.querySelector(".menu-toggle").addEventListener("click", () => {
+          nav.classList.toggle("open");
+        });
+      });
+  </script>
+  <script>
+  window.addEventListener('load', () => {
+    document.body.classList.add('loaded');
+  });
+</script>
+
+</body>
+</html>

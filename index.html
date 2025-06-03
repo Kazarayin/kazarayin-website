@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>K.A. Zarayin | Official Website</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@700&family=Spectral&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- HEADER LOADER -->
+  <div id="header-placeholder"></div>
+
+  <!-- BOOK SECTION -->
+  <section class="book-section">
+  <div class="book-info">
+    <h2>
+      <a href="the-dancing-jinn.html" style="color: #d4af37; text-decoration: none;">
+        The Dancing Jinn
+      </a>
+    </h2>
+    <a href="the-dancing-jinn.html">
+      <img src="The Dancing Jinn Under Moonlight.png" alt="Book cover for Between Two Worlds" class="book-cover" />
+    </a>
+    <p>
+      An ongoing story that written by me
+    </p>
+    <a href="the-dancing-jinn.html">
+      <button class="preorder">Read More</button>
+    </a>
+  </div>
+</section>
+
+
+  <!-- ABOUT SECTION -->
+  <section class="about">
+    <h3>A Glimpse</h3>
+    <div class="about-container">
+      <a href="about.html">
+      <img src="Author.jpg" class="author-photo" alt="Author Photo" />
+      </a>
+      <p>
+        K.A. Zarayin is the author of dark horror fantasy novels blending folklore, horror, and ancient magic.
+        He conjures stories where the veil between worlds is perilously thin.<br>
+      </p>
+    </div>
+  </section>
+
+  <!-- SOCIALS SECTION -->
+  <section class="socials">
+    <h2>Follow</h2>
+    <a href="https://www.tiktok.com/@kazarayin" target="_blank">
+      <img src="tiktok-logo.png" alt="TikTok" class="social-icon" />
+    </a>
+    <a href="https://www.instagram.com/kazarayin" target="_blank">
+      <img src="instagram-logo.png" alt="Instagram" class="social-icon" />
+    </a>
+    <a href="https://www.wattpad.com/user/Kazarayin" target="_blank">
+      <img src="wattpad-logo.png" alt="Wattpad" class="social-icon" />
+    </a>
+  </section>
+
+  <!-- SUBSCRIBE SECTION -->
+  <section class="subscribe">
+    <h4>Subscribe for Updates</h4>
+    <form>
+      <input type="email" placeholder="Email address" required />
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 K.A. Zarayin. All curses reserved.</p>
+  </footer>
+
+  <!-- HEADER NAV SCRIPT -->
+  <script>
+    fetch('header.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      })
+      .then(() => {
+        const nav = document.getElementById("mainNav");
+        document.querySelector(".menu-toggle").addEventListener("click", () => {
+          nav.classList.toggle("open");
+        });
+      });
+  </script>
+
+
+</body>
+</html>

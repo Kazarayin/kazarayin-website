@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Between Two Worlds – Book One</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .book-detail {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 40px 20px;
+      background: #0b0b0b;
+      color: #e4e4e4;
+      border-left: 4px solid #d4af37;
+      font-family: 'Spectral', serif;
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.1);
+    }
+
+    .book-detail h1 {
+      color: #d4af37;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .book-detail img {
+      width: 200px;
+      float: right;
+      margin-left: 20px;
+      box-shadow: 0 0 12px rgba(212, 175, 55, 0.3);
+    }
+
+    .book-detail p {
+      text-align: justify;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 40px;
+      color: #d4af37;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .book-detail img {
+        float: none;
+        display: block;
+        margin: 0 auto 20px;
+      }
+    }
+
+    .book-quote {
+  margin-top: 30px;
+  padding-left: 20px;
+  font-style: italic;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.quote-source {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #979797;
+}
+
+  </style>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <section class="book-detail">
+    <img src="book-cover.png" alt="Book Cover" />
+    <h1>Between Two Worlds</h1>
+    <blockquote class="book-quote">
+  “The soul is not the price. It’s the door.”<br>
+  <span class="quote-source">— Unknown</span>
+</blockquote>
+
+    <br>
+    <p>
+      <strong>Acts:</strong> 5.<br>
+      <strong>Chapters:</strong> 99.<br>
+      <strong>Pages Count:</strong> 500.<br>
+      <strong>Words count:</strong> 120,000.
+    </p>
+    <hr class="divider" color="#d4af37">
+    <p>
+        <strong>Synopsis:</strong><br>
+        <br>
+        A group of friends on a weekend camping trip vanish without a trace.
+     Months later, a hopeful family moves into the same forest, seeking a fresh start — only to find the nightmare never ended.
+
+     Years down the line, a struggling author obsessed with forgotten folklore follows their stories… unknowingly stepping
+     into a curse older than time itself.<br>
+
+     <strong>Three stories. One horror.</strong><br>
+     The deeper they go, the less human they become.
+    </p>
+    <p>
+      <strong><em>Between Two Worlds</em></strong> is the haunting first volume in a dark fantasy saga rooted in many folklore.  
+      Expect ancient magic, forbidden languages, haunted bloodlines — and a war that spans dimensions.
+    </p>
+    <p>
+      This book is written in Arabic first, then lovingly translated into English by the author.  
+      It's a saga meant to shiver down your spine and settle into your dreams.
+    </p>
+    <p>
+        The story makes us see the world from many characters prespective.
+    </p>
+
+    <a class="back-link" href="books.html">← Go to Books</a>
+  </section>
+
+  <script>
+    fetch('/header.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      })
+      .then(() => {
+        const nav = document.getElementById("mainNav");
+        document.querySelector(".menu-toggle").addEventListener("click", () => {
+          nav.classList.toggle("open");
+        });
+      });
+  </script>
+</body>
+</html>
